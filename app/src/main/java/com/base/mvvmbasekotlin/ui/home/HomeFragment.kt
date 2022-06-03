@@ -5,6 +5,8 @@ import com.base.mvvmbasekotlin.base.BaseFragment
 import com.base.mvvmbasekotlin.base.custom.BaseFragmentStatePagerAdapter
 import com.base.mvvmbasekotlin.base.entity.BaseFragmentPagerModel
 import com.base.mvvmbasekotlin.ui.list_account.AccountFragment
+import com.base.mvvmbasekotlin.utils.ACTIVE
+import com.base.mvvmbasekotlin.utils.DISABLE
 import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.home_fragment.*
@@ -25,14 +27,14 @@ class HomeFragment : BaseFragment() {
     override fun initView() {
         listFragments.add(
             BaseFragmentPagerModel(
-                AccountFragment(),
+                AccountFragment.newInstance(ACTIVE),
                 "TK chưa kich hoạt"
             )
         )
 
         listFragments.add(
             BaseFragmentPagerModel(
-                AccountFragment(),
+                AccountFragment.newInstance(DISABLE),
                 "TK đã kich hoạt"
             )
         )

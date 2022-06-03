@@ -135,11 +135,11 @@ abstract class BaseFragment : Fragment() {
         }
     }
 
-    protected fun showLoading(){
+    open fun showLoading(){
         LoadingDialog.getInstance(requireContext()).show()
     }
 
-    protected fun hideLoading(){
+    open fun hideLoading(){
         LoadingDialog.getInstance(requireContext()).hidden()
     }
 
